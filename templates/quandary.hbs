@@ -1,4 +1,22 @@
 <h1>The quandary: {{question}}</h1>
-<p class="lead">Author: {{author}}</p>
-
-<p>{{description}}</p>
+{{#if isEditing}}
+  <form>
+    <div class="form-group">
+      <label for="author">Author(example: Jack P.)</label>
+      {{input id="author" class="form-control" value=author}}
+    </div>
+    <div class="form-group">
+      <label for="question">Question</label>
+      {{input id="question" class="form-control" value=question}}
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      {{textarea id="description" class="form-control" rows="10" value=description}}
+    </div>
+    <button class="btn btn-primary" {{action 'save'}}>Save</button>
+  </form>
+  {{else}}
+  <p class="lead">Author: {{author}}</p>
+  <p>{{description}}</p>
+  <button class="btn btn-primary" {{action 'edit'}}>Edit quandary</button>
+  {{/if}}

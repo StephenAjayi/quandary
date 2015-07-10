@@ -2,6 +2,6 @@
 <p>Whether you have a question about class work or the meaning of life, wou'll find answers here.</p>
 <ul>
   {{#each}}
-    <li>{{author}}</li>
+    <li>{{author}}{{#link-to 'quandary' this.id}}{{question}}{{/link-to}}</li>
   {{/each}}
 </ul>

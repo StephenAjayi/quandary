@@ -1,4 +1,4 @@
-var questions = [
+var quandaries = [
   {
     id:'1',
     author:'Nancy J.',

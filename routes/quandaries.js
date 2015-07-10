@@ -1,6 +1,6 @@
 Quandary.QuandariesRoute = Ember.Route.extend({
   model: function() {
-    return quandaries
+    return this.store.find('quandary');
   }
 
 });

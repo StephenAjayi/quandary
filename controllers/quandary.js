@@ -6,6 +6,12 @@ Quandary.QuandaryController = Ember.ObjectController.extend({
     },
     save: function() {
       this.set('isEditing', false);
+    },
+    delete: function() {
+      if (confirm('Are you sure you want to delete this quandary?')) {
+        this.get('model').destroyRecord();
+        this.transitionToRoute('quandaries')
+      }
     }
 
   }

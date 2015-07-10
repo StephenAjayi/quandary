@@ -1,1 +1,0 @@
-Quandry = Ember.Application.create();

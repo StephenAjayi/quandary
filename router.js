@@ -1,5 +1,5 @@
-Quandry.Router.map(function() {
-  this.resource("quandaries");
+Quandary.Router.map(function() {
+  this.resource("quandaries", {path: "/"});
 
 
   });

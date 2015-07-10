@@ -20,4 +20,15 @@
   <p>{{description}}</p>
   <button class="btn btn-primary" {{action 'edit'}}>Edit quandary</button>
   <button class="btn btn-danger" {{action 'delete'}}>Delete quandary</button>
-  {{/if}}
+{{/if}}
+
+<h2>Answers</h2>
+
+{{#each answers}}
+<p>{{text}}</p>
+
+{{/each}}
+
+<p>{{#link-to 'new-answer' this.id class="btn btn-info"}}Add an answer{{/link-to}}</p>
+
+{{outlet}}
